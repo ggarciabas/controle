@@ -22,7 +22,7 @@ import modelo.Sala;
  * @author Giovanna Garcia
  * @author Marcos Agnes
  */
-public abstract class Decorator extends Sala {
+public abstract class Decorator extends Sala {   
     @Override
     public abstract String getIdentificacao ();
 }

@@ -12,24 +12,14 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-package modelo.concreto;
-
-import modelo.Pessoa;
+package app;
 
 /**
- *  Classe Responsavel Geral
- *  
+ *  Main
+ * 
  * @author Giovanna Garcia
  * @author Marcos Agnes
  */
-public class ResponsavelGeral extends Pessoa {
-
-    public ResponsavelGeral() {
-    }
-
-    @Override
-    public String getDescricao() {
-        return "Geral";
-    }
+public class Main {
     
 }

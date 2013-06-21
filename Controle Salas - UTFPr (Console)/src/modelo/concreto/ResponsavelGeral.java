@@ -14,6 +14,7 @@
  */
 package modelo.concreto;
 
+import java.util.Date;
 import modelo.Pessoa;
 
 /**
@@ -23,8 +24,9 @@ import modelo.Pessoa;
  * @author Marcos Agnes
  */
 public class ResponsavelGeral extends Pessoa {
-
+    
     public ResponsavelGeral() {
+        super.m_inicio = new Date();
     }
 
     @Override

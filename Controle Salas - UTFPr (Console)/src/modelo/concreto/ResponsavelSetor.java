@@ -14,6 +14,7 @@
  */
 package modelo.concreto;
 
+import java.util.Date;
 import modelo.Pessoa;
 
 /**
@@ -25,6 +26,7 @@ import modelo.Pessoa;
 public class ResponsavelSetor extends Pessoa {
 
     public ResponsavelSetor() {
+        super.m_inicio = new Date();
     }   
     
     @Override

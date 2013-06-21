@@ -14,6 +14,7 @@
  */
 package modelo.concreto;
 
+import java.util.Date;
 import modelo.Pessoa;
 
 /**
@@ -25,11 +26,12 @@ import modelo.Pessoa;
 public class Professor extends Pessoa {
 
     public Professor() {
-    }    
+        super.m_inicio = new Date();
+    }      
     
     @Override
     public String getDescricao() {
-        return "Pessoa";
+        return "Professor";
     }
     
 }

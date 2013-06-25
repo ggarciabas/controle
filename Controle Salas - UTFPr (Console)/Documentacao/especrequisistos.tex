@@ -1,0 +1,270 @@
+\chapter{Especificaç\~ao de requisitos}
+
+	An\'alise de requisitos, faz parte da engenharia de software e tem por objetivo ligar alocação de software em n\'ivel de sistema com o projeto de software.\\
+	Esta an\'alise da a possibilidade de especificar funções, desempenho do software, interface e restrições.\\
+	Estes requisitos podem ser divididos em reconhecimento do problema, avaliação e s\'intese, modelagem, especificação e revisão.\\
+
+\section{Requisitos funcionais e n\~ao funcionais}
+	Da \ref{tab:rfcadusu} at\'e a \ref{tab:rfconsres} ser\~ao apresentados os requisitos funcionais e n\~ao funcionais do sistema  CONSUN.
+		
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 1 Cadastrar Usu\'ario} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Somente o RG poder\'a cadastrar os usu\'arios do sistema.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline	
+		1.1 Obter dados para cadastro & Nome do usu\'ario, e-mail e senha. & Interface & ( ) & (X) \\
+		\hline	
+		1.2 Cadastrar dados & Verificar a exist\^encia do usu\'ario no banco. & Segurança & ( ) & (X) \\
+		\hline
+		% Sa\'ida: Mensagem de confirmaç\~ao bem sucedido do cadastro caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 1 Cadastrar Usu\'ario}
+	\label{tab:rfcadusu}
+\end{table}	
+		 	 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 2 Modificar Cadastro de Usu\'ario} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: O PF pode fazer alteraç\~ao de seu perfil.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline	
+		2.1 Obter dados da modifcaç\~ao & Identificaç\~ao do usu\'ario, campo desejado e novo dado. & Interface & ( ) & (X)\\	
+		\hline
+		%  \indent \indent Processo: Atualizaç\~ao no banco de dados.\\
+		%	 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da modificaç\~ao caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 2 Modificar Cadastro de Usu\'ario}
+	\label{tab:rfmodfusu}
+\end{table}			 	
+			
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 3 Excluir Cadastro de Usu\'ario} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Somente o RG poder\'a excluir o cadastro do usu\'ario.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		3.1 Obter dados & Identificação do usu\'ario. & Interface & ( ) & (X)\\
+		\hline
+		3.2 Excluir sala & Verificar se o usu\'ario \'e cadastrado no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		%  Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da exclus\~ao do cadastro caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 3 Excluir Cadastro de Usu\'ario}
+	\label{tab:rfexcusu}
+\end{table}						
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 4 Consultar Usu\'ario} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Todos os usu\'arios poder\~ao efetuar a consulta.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		4.1 Obter dados & Identificaç\~ao do usu\'ario. & Interface & ( ) & (X)\\
+		\hline
+		4.2 Consultar usu\'ario & Verificar se o usu\'ario \'e cadastrado no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		% Sa\'ida: Retorno dos dados do usu\'ario caso o mesmo esteja cadastrado no sistema, sen\~ao, mensagem de erro.\\ 			 			 	
+	\end{tabular}
+	\caption{RF. 4 Consultar Usu\'ario}
+	\label{tab:rfconsusu}
+\end{table}			
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 5 Cadastro de Salas} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Somente o RG poder\'a cadastrar as salas no sistema.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		5.1 Obter dados & Descrição da sala  e seus decoradores. & Interface & ( ) & (X)\\
+		\hline
+		% \indent \indent Processo: O cadastrp ser\'a incluido no banco de dados.\\
+		%	 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido do cadastro caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\		
+	\end{tabular}
+	\caption{RF. 5 Cadastro de Salas}
+	\label{tab:rfcadsala}
+\end{table}					 			 
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 6 Modificar Cadastro de Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Somente o RG e o RS	poder\~ao modificar as salas do sistema.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		6.1 Obter dados & Identificaç\~ao da sala, campo desejado e novo dado. & Interface & ( ) & (X)\\
+		\hline
+		%  \indent \indent Processo: Atualizaç\~ao no banco de dados.\\
+		%	 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da modificaç\~ao caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 6 Modificar Cadastro de Sala}
+	\label{tab:rfmodfsala}
+\end{table}			 	 			 
+				 			 			 			     		 			 						 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 7 Excluir Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Somente o RG poder\'a excluir a sala.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		7.1 Obter dados & Identificaç\~ao da sala. & Interface & ( ) & (X)\\
+		\hline
+		7.2 Exluir sala & Verificar se a sala \'e cadastrada no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		% 			 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da exclus\~ao do cadastro caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\	
+	\end{tabular}
+	\caption{RF. 7 Excluir Sala}
+	\label{tab:rfexcsala}
+\end{table}					 
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 8 Consultar Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Todos os usu\'arios poderão efetuar a consulta.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		8.1 Obter dados & Identificaç\~ao da sala. & Interface & ( ) &(X)\\
+		\hline
+		8.2 Consultar sala & Verificar se a sala \'e cadastrada no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		% 			 \indent \indent Sa\'ida: Retorno dos dados da sala caso a mesma esteja cadastrada no sistema, senão, mensagem de erro.\\	 
+	\end{tabular}
+	\caption{RF. 8 Consultar Sala}
+	\label{tab:rfconssala}
+\end{table}					 
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 9 Cadastrar Reserva de Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Todos os usu\'arios poderão reservar uma sala.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		9.1 Obter dados & Identificaç\~ao da sala, identificaç\~ao do usu\'ario, data, hora in\'icio e hora fim. & Interface & ( ) & (X)\\
+		\hline 
+		9.2 Cadastrar reserva & Verificar se a sala \'e cadastrada no sistema e se a mesma j\'a possui uma reserva na data. & Segurança & ( ) & (X)\\
+		\hline
+		%			 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da reserva da sala caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 9 Cadastrar Reserva de Sala}
+	\label{tab:rfcadres}
+\end{table}					 
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 10 Excluir Reserva de Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: O RS poder\'a excluir qualquer reserva do seu setor. O PF poder\'a somente deletar sua reserva.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		10.1 Obter dados & Identificaç\~ao da reserva e identificaç\~ao do usu\'ario. & Interface & ( ) & (X)\\
+		\hline
+		10.2 Excluir reserva & Verificar se a reserva \'e cadastrada no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		%			 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da reserva da sala caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 10 Excluir Reserva de Sala}
+	\label{tab:rfexcres}
+\end{table}					 
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 11 Modificar Reserva de Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: O RS poder\'a modificar qualquer reserva do seu setor. O PF poder\'a somente modificar sua reserva.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		11.1 Obter dados & Identificaç\~ao da reserva, do usu\'ario, campo desejado e novos dados. & Interface & ( ) & (X)\\
+		\hline
+		11.2 Modificar reserva & Verificar se a reserva \'e cadastrada no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		% 			 \indent \indent Sa\'ida: Mensagem de confirmaç\~ao bem sucedido da reserva da sala caso tenha sido efetuado com sucesso, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 11 Modificar Reserva de Sala}
+	\label{tab:rfmodfres}
+\end{table}					 
+			 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|c|c|c|}
+		\hline
+		\multicolumn {1}{|p{4cm}|} {RF. 12 Consultar Reserva de Sala} & \multicolumn{4}{|l|}{ Evidente()}\\
+		\hline
+		\multicolumn{5}{|p{14cm}|} {Descriç\~ao: Todos os usu\'arios cadastrados poder\~ao consultar as reservas de sala.}\\
+		\hline
+		\multicolumn{5}{|l|} {Requisitos não Funcionais}\\
+		\hline
+		Nome & Restrição & Categoria & Desej\'avel & Permanente \\
+		\hline		
+		12.1 Obter dados & Identificaç\~ao da reserva de sala. & Interface & ( ) & (X)\\
+		\hline
+		12.2 Consultar reserva & Verificar se a reserva \'e cadastrada no sistema. & Segurança & ( ) & (X)\\
+		\hline
+		%			 \indent \indent Sa\'ida: Retorno dos dados da reserva caso a mesma esteja cadastrada no sistema, sen\~ao, mensagem de erro.\\
+	\end{tabular}
+	\caption{RF. 12 Consultar Reserva de Sala}
+	\label{tab:rfconsres}
+\end{table}					 									 			 					 			 			 					 			 			 	

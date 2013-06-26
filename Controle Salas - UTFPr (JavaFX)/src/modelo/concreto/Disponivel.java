@@ -14,18 +14,18 @@
  */
 package modelo.concreto;
 
-import modelo.Estado;
+import padroes.State;
 import modelo.Sala;
 
 /**
  * Classe Disponível
  *
- * @description Estado de uma sala.
+ * @description State de uma sala.
  * 
  * @author Giovanna Garcia
  * @author Marcos Agnes
  */
-public class Disponivel implements Estado{
+public class Disponivel implements State{
 
     private Sala m_sala;
     

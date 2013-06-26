@@ -14,6 +14,7 @@
  */
 package modelo;
 
+import padroes.State;
 import modelo.concreto.Disponivel;
 
 /**
@@ -26,17 +27,17 @@ import modelo.concreto.Disponivel;
  */
 public abstract class Sala {
     protected String m_identificacao = "Sala sem identificação";
-    // Estado da sala
-    protected Estado m_estadoOcupado;
-    protected Estado m_estadoDisponivel;
-    protected Estado m_estado = new Disponivel(this);
+    // State da sala
+    protected State m_estadoOcupado;
+    protected State m_estadoDisponivel;
+    protected State m_estado = new Disponivel(this);
 
     // Gets
-    public Estado getEstadoOcupado () {
+    public State getEstadoOcupado () {
         return this.m_estadoOcupado;
     }
     
-    public Estado getEstadoDisponivel () {
+    public State getEstadoDisponivel () {
         return this.m_estadoDisponivel;
     }        
     
@@ -45,7 +46,7 @@ public abstract class Sala {
     }
 
     // Sets
-    public void setEstado (Estado estado) {
+    public void setEstado (State estado) {
         this.m_estado = estado;
     }
     

@@ -14,6 +14,9 @@
  */
 package padroes.interfaces.concreto;
 
+import enumeracoes.TipoPessoa;
+import excecoes.PessoaException;
+import java.io.IOException;
 import modelo.Pessoa;
 import modelo.Sala;
 import modelo.concreto.Reserva;
@@ -30,22 +33,25 @@ import padroes.interfaces.GerenciarSala;
 public class ProfessorProxy implements GerenciarPessoa, GerenciarReservas, GerenciarSala {
 
     @Override
-    public Pessoa criarPessoa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pessoa criarPessoa(TipoPessoa tp) throws PessoaException, IOException {
+        System.out.println("---> Professor Pessoa - criarPessoa(): esta pessoa não pode criar uma pessoa.");
+        throw new PessoaException("O usuario não possui permissão para efetuar o cadastro de uma nova pessoa.");
     }
 
     @Override
-    public void deletarPessoa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletarPessoa(Pessoa p) throws PessoaException, IOException {
+        System.out.println("---> Professor Pessoa - criarPessoa(): esta pessoa não pode deletar uma pessoa.");
+        throw new PessoaException("O usuario não possui permissão para deletar uma pessoa.");        
     }
 
     @Override
-    public void alterarPessoa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterarPessoa(Pessoa p) throws PessoaException, IOException {
+        System.out.println("---> Professor Pessoa - criarPessoa(): esta pessoa não pode alterar uma pessoa.");
+        throw new PessoaException("O usuario não possui permissão para alterar uma pessoa.");
     }
 
     @Override
-    public Reserva criarReserva() {
+    public Reserva criarReserva(Pessoa p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -60,12 +66,12 @@ public class ProfessorProxy implements GerenciarPessoa, GerenciarReservas, Geren
     }
 
     @Override
-    public void deletarSala() {
+    public void deletarSala(Sala s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void alterarSala() {
+    public void alterarSala(Sala s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

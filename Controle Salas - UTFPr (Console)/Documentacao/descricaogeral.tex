@@ -1,5 +1,12 @@
-\chapter{Descriç\~ao Geral}
-	O sistema CONSUN gerencia as reservas de salas da UTFPR (Universidade Tecnol\'ogica Federal do Paran\'a) , onde somente os usu\'arios logados ter\~ao permiss\~ao para inserir, excluir, modificar e consultar as reservas. Neste caso somente o RG poder\'a inserir e excluir um usu\'ario e uma sala. O RS poder\'a modificar e deletar todas as reservas, e modificar as salas de seu setor. PFs somente poder\~ao inserir, excluir e modificar a sua pr\'opria reserva, e modificar o seu perfil de usu\'ario.
+\chapter{Vis\~ao Geral}
+%	O sistema CONSUN gerencia as reservas de salas da UTFPR (Universidade Tecnol\'ogica Federal do Paran\'a) , onde somente os usu\'arios logados ter\~ao %permiss\~ao para inserir, excluir, modificar e consultar as reservas. Neste caso somente o RG poder\'a inserir e excluir um usu\'ario e uma sala. O RS poder\'a %modificar e deletar todas as reservas, e modificar as salas de seu setor. PFs somente poder\~ao inserir, excluir e modificar a sua pr\'opria reserva, e modificar o %seu perfil de usu\'ario.
+	O objetivo do sistema é gerenciar as reservas de salas, bem como os usu\'arios, tendo o controle dos n\'iveis de prioridade dentro da estrutura hier\'arquica do sistema, permitindo que determinado usu\'ario somente execute o que seu n\'ivel lhe permita. %Os dados serão armazenados em um banco de dados contido no servidor web.
+	
+	A reserva somente poder\'a ser feita por um usu\'ario previmente cadastrado no sistema. O Respons\'avel Geral \'e o único usuário que poderá inserir e deletar outros usuários. Cada usuário poderá somente modificar seu cadastro.
+	O cadastro de salas \'e feito pelo Responsável Geral e os Responsáveis por cada setor terão a permissão para modificar as salas.
+	
+	Para que uma reserva seja feita a sala desejada deverá estar disponível na data determinada pelo requerente (usuário). O usuário poderá inserir e consultar qualquer reserva, excluir e modificar somente a sua reserva. Havendo algum problema com relação a reserva de uma determinada sala, o Responsável Setor poderá excluir e modificar as reservas de seu setor.
+	
 	
 \section{Perspectiva do Produto}
 	O sistema opera com uma m\'aquina servidor que gerencia os cadastro no banco de dados.

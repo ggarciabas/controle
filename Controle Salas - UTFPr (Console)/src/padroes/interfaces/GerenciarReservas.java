@@ -14,6 +14,7 @@
  */
 package padroes.interfaces;
 
+import modelo.Pessoa;
 import modelo.concreto.Reserva;
 
 /**
@@ -23,6 +24,6 @@ import modelo.concreto.Reserva;
  * @author Marcos Agnes
  */
 public interface GerenciarReservas {
-    public Reserva criarReserva ();
+    public Reserva criarReserva (Pessoa p);
     public void liberarReserva ();
 }

@@ -14,6 +14,7 @@
  */
 package padroes.interfaces.concreto;
 
+import enumeracoes.TipoPessoa;
 import modelo.Pessoa;
 import modelo.Sala;
 import modelo.concreto.Reserva;
@@ -30,22 +31,22 @@ import padroes.interfaces.GerenciarSala;
 public class SetorProxy implements GerenciarPessoa, GerenciarReservas, GerenciarSala {
 
     @Override
-    public Pessoa criarPessoa() {
+    public Pessoa criarPessoa(TipoPessoa tp) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void deletarPessoa() {
+    public void deletarPessoa(Pessoa p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void alterarPessoa() {
+    public void alterarPessoa(Pessoa p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Reserva criarReserva() {
+    public Reserva criarReserva(Pessoa p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -60,12 +61,12 @@ public class SetorProxy implements GerenciarPessoa, GerenciarReservas, Gerenciar
     }
 
     @Override
-    public void deletarSala() {
+    public void deletarSala(Sala s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void alterarSala() {
+    public void alterarSala(Sala s) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

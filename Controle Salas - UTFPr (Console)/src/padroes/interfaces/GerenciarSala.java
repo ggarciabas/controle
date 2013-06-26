@@ -24,6 +24,6 @@ import modelo.Sala;
  */
 public interface GerenciarSala {
     public Sala criarSala ();
-    public void deletarSala ();
-    public void alterarSala ();
+    public void deletarSala (Sala s);
+    public void alterarSala (Sala s);
 }

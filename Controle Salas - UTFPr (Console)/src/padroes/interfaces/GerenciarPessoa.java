@@ -14,6 +14,9 @@
  */
 package padroes.interfaces;
 
+import enumeracoes.TipoPessoa;
+import excecoes.PessoaException;
+import java.io.IOException;
 import modelo.Pessoa;
 
 /**
@@ -23,9 +26,9 @@ import modelo.Pessoa;
  * @author Marcos Agnes
  */
 public interface GerenciarPessoa {
-    public Pessoa criarPessoa ();
+    public Pessoa criarPessoa (TipoPessoa tp) throws PessoaException, IOException;
     
-    public void deletarPessoa ();
+    public void deletarPessoa (Pessoa p) throws PessoaException, IOException;
     
-    public void alterarPessoa ();
+    public void alterarPessoa (Pessoa p) throws PessoaException, IOException;
 }
